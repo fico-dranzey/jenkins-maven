@@ -16,6 +16,7 @@ pipeline {
         }
         stage('packaging') {
             steps {
+                input("do you want to package?")
                 sh "mvn package"
             }
         }
